@@ -1,22 +1,18 @@
-### Configure in Jenkins
-1. Go to **Manage Jenkins > Configure System > Global Pipeline Libraries**.
-2. Add:
-   - **Name**: `shared-library`
-   - **Default Version**: `main`
-   - **Git Repository URL**: `https://your-repo-url.git`
+## Folder Descriptions
 
-### Example Jenkinsfile
-```groovy
-@Library('shared-library') _
+### `vars/`
+Contains Groovy files that define functions callable directly in Jenkins pipelines.  
+Each file name becomes a step in the pipeline.  
+**Example:** `exampleStep.groovy` defines a step `exampleStep`.
 
-pipeline {
-    agent any
+---
 
-    stages {
-        stage('Example Step') {
-            steps {
-                exampleStep('Hello from Shared Library!')
-            }
-        }
-    }
-}
+### `src/`
+Holds helper classes or utilities organized in packages.  
+**Example:** `org.mycompany.helpers.Utils` class for reusable logic.
+
+---
+
+### `resources/`
+Stores external resources like templates, configuration files, or static assets.  
+These resources are accessible via Groovy's resource loading.
