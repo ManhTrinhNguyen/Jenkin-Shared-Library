@@ -16,3 +16,6 @@ Holds helper classes or utilities organized in packages.
 ### `resources/`
 Stores external resources like templates, configuration files, or static assets.  
 These resources are accessible via Groovy's resource loading.
+
+
+# Create Jenkins Share Library 
