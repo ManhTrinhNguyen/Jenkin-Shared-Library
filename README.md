@@ -19,3 +19,11 @@ These resources are accessible via Groovy's resource loading.
 
 
 # Create Jenkins Share Library 
+1. Create Repository
+   1. Create **Var Folder**: Include all function that call from Jenkinfile
+      - Each function/execution step is its own Groovy file
+   2. Create **src Folder** : Helper code
+   3. **Resources Folder** : Allow you to run external resources library for non groovy file 
+3. Write in Groovy code
+4. Make the shared library available globally or for project
+5. Use share library in Jenkinsfile to extend the Pipline 
